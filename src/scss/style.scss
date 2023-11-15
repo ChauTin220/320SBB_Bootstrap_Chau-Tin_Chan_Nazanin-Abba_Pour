@@ -7,7 +7,55 @@ $C02: blue;
 
 // ------------------------------------------------------------------------------------
 h1 {
-    color: $C01;
+    color: #252733;
+    font-family: Muli;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.3px;
+}
+
+h2 {
+    color: #9FA2B4;
+    text-align: center;
+    font-family: Muli;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+h3 {
+    color: 252733;
+    font-family: Muli;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+h4 {
+    color: #9FA2B4;
+    text-align: center;
+    font-family: Muli;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+}
+
+h6 {
+    color: #9FA2B4;
+    font-family: Muli;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1px;
 }
 
 hr {
@@ -58,11 +106,11 @@ hr {
         align-items: center;
         text-decoration: none;
         margin: 9px 12px 9px 16px;
-    
+
         svg {
-          margin-right: 24px;
+            margin-right: 24px;
         }
-    
+
         span {
             color: #A4A6B3;
             font-family: Muli;
@@ -72,7 +120,7 @@ hr {
             line-height: normal;
             letter-spacing: 0.2px;
         }
-      }
+    }
 
     &.active {
         color: #DDE2FF;
@@ -83,4 +131,150 @@ hr {
             fill: #DDE2FF;
         }
     }
+}
+
+// Content
+.content {
+    background: #F7F8FC;
+
+    .CTheader {
+        padding: 30px 30px 0 30px;
+
+        .headerR {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            svg {
+                margin-left: 30px;
+            }
+
+            p {
+                color: #252733;
+                text-align: right;
+                font-family: Muli;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                margin-left: 32px;
+            }
+
+
+            img {
+                width: 44px;
+                height: 44px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                border: 3px solid white;
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+    .detail {
+        padding: 30px 20px 0 20px;
+
+        .row {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sheet {
+            border-radius: 8px;
+            border: 1px solid #DFE0EB;
+            background: #FFF;
+            margin: 15px;
+            text-align: center;
+            padding: 24px 32px 24px 32px;
+
+            p {
+                color: #252733;
+                text-align: center;
+                font-family: Muli;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 1px;
+                margin-top: 12px;
+            }
+
+            &:not(.disable):hover {
+                border: 1px solid #3751FF;
+                cursor: pointer;
+
+                h2 {
+                    color: #3751FF;
+                }
+
+                p {
+                    color: #3751FF;
+                }
+            }
+
+        }
+
+        // 2nd row
+        .graph {
+            text-align: left;
+            padding: 32px;
+
+            .legenddiv {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                svg {
+                    margin: 0 12px 0 12px;
+                }
+
+            }
+
+            #graphimg {
+                margin-top: 73px;
+                max-width: 97%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    object-fit: contain;
+                  }
+            }
+
+        }
+
+        .graphside {
+            padding: 0;
+
+            div {
+                margin: auto;
+                height: 20%;
+                border-left: 1px solid #DFE0EB;
+                border-top: 1px solid #DFE0EB;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            
+                p {
+                  font-size: 24px;
+                  margin-top: 6px;
+                }
+              }
+            div:first-child{
+                border-top: none;
+             }
+
+
+        }
+
+    }
+
+
+
 }

@@ -12,15 +12,15 @@
 	<link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
-<body class="container-fluid overflow-hidden vh-100 d-flex flex-column">
+<body class="container-fluid vh-100 d-flex flex-column">
 	<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
 		</script>
 
 	<!-- content start from here -->
 	<div class="row content-area flex-grow-1">
+		<!-- sidebar -->
 		<div class="col-lg-2 text-center bg01 p-0">
-			<!-- sidebar -->
 			<div id="DBtitle">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 					<circle cx="16" cy="16" r="16" fill="#3751FF" />
@@ -37,9 +37,8 @@
 				</svg>
 				<span>Dashboard Kit</span>
 			</div>
-			<!-- sidebar btn -->
+			<!-- Sidebar btn -->
 			<ul class="nav flex-column mb-auto">
-				<!-- <ul class="nav nav-pills flex-column mb-auto sidetxt"> -->
 				<li class="nav-link active">
 					<a href="" aria-current="page">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -151,11 +150,125 @@
 				</li>
 			</ul>
 		</div>
-		<div class="col-lg-10 text-center">
+		<!-- Content -->
+		<div class="col-lg-10 content container-fluid">
+			<div class="CTheader row">
+				<h1 class="col-lg-4">Overview</h1>
+				<div class="col-lg-8 headerR">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+						<g clip-path="url(#clip0_584_242)">
+							<circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD" stroke-width="1.5" />
+							<path d="M11 11L15 15" stroke="#C5C7CD" stroke-width="1.5" stroke-linecap="round" />
+						</g>
+						<defs>
+							<clipPath id="clip0_584_242">
+								<rect width="16" height="16" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+						<path
+							d="M7.99999 19C9.10374 19 9.99905 18.1047 9.99905 17H6.00093C6.00093 18.1047 6.89624 19 7.99999 19ZM14.7309 14.3216C14.1272 13.6728 12.9975 12.6969 12.9975 9.5C12.9975 7.07188 11.295 5.12812 8.99937 4.65125V4C8.99937 3.44781 8.55187 3 7.99999 3C7.44812 3 7.00062 3.44781 7.00062 4V4.65125C4.70499 5.12812 3.00249 7.07188 3.00249 9.5C3.00249 12.6969 1.8728 13.6728 1.26905 14.3216C1.08155 14.5231 0.998429 14.7641 0.999991 15C1.00343 15.5125 1.40562 16 2.00312 16H13.9969C14.5944 16 14.9969 15.5125 15 15C15.0016 14.7641 14.9184 14.5228 14.7309 14.3216Z"
+							fill="#C5C7CD" />
+						<circle cx="13" cy="5" r="3.75" fill="#3751FF" stroke="#F7F8FC" stroke-width="1.5" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="2" height="32" viewBox="0 0 2 32" fill="none">
+						<path d="M1 0V32" stroke="#DFE0EB" />
+					</svg>
+					<p>Jones Ferdinand</p>
+					<img src="/assets/img/img_avatar.png" alt="Avatar">
+				</div>
+			</div>
+			<div class="detail row">
+				<!-- 1st row -->
+				<div class="sheet col">
+					<h2>Unresolved</h2>
+					<p>60</p>
+				</div>
+				<div class="sheet col">
+					<h2>Overdue</h2>
+					<p>16</p>
+				</div>
+				<div class="sheet col">
+					<h2>Open</h2>
+					<p>43</p>
+				</div>
+				<div class="sheet col">
+					<h2>On hold</h2>
+					<p>64</p>
+				</div>
+				<!-- 2nd row -->
+				<div class=" container-fluid p-0">
+					<div class="row sheet disable p-0">
+						<div class="col-lg-8 graph row">
+							<h3>Today's trends</h3>
+							<div class="col-lg-7">
+								<h6>as of 25 May 2019, 09:41 PM</h6>
+							</div>
+							<div class="col-lg-5 legenddiv">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
+									fill="none">
+									<path d="M1 1H17" stroke="#3751FF" stroke-width="2" stroke-linecap="round" />
+								</svg>
+								<h6>Today</h6>
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
+									fill="none">
+									<path d="M1 1H17" stroke="#DFE0EB" stroke-width="2" stroke-linecap="round" />
+								</svg>
+								<h6>Yesterday</h6>
+							</div>
+							<div class="col-lg-12" id="graphimg">
+								<img src="/assets/img/fullgraph.png" alt="Today's trends graph">
+							</div>
+						</div>
+						<!-- Graph side bar -->
+						<div class="col-lg-4 row graphside">
+							<div class="col-lg-12">
+								<h4>Resolved</h4>
+								<p>449</p>
+							</div>
+							<div class="col-lg-12">
+								<h4>Resolved</h4>
+								<p>426</p>
+							</div>
+							<div class="col-lg-12">
+								<h4>Average first response time</h4>
+								<p>33m</p>
+							</div>
+							<div class="col-lg-12">
+								<h4>Average response time</h4>
+								<p>3h 8m</p>
+							</div>
+							<div class="col-lg-12">
+								<h4>Resolution within SLA</h4>
+								<p>94%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 3rd row -->
+				<div class="sheet col disable">
+					<h3>Unresolved tickets</h3>
+					<div class="col-lg-7">
+						<h6>as of 25 May 2019, 09:41 PM</h6>
+					</div>
+					<div class="col-lg-5 legenddiv">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
+							fill="none">
+							<path d="M1 1H17" stroke="#3751FF" stroke-width="2" stroke-linecap="round" />
+						</svg>
+						<h6>Today</h6>
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
+							fill="none">
+							<path d="M1 1H17" stroke="#DFE0EB" stroke-width="2" stroke-linecap="round" />
+						</svg>
+						<h6>Yesterday</h6>
+					</div>
+				</div>
+				<div class="sheet col disable">Task</div>
 
-			
+			</div>
 		</div>
-	</div>
 
 
 

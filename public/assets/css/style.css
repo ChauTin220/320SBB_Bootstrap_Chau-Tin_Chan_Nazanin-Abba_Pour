@@ -1,5 +1,53 @@
 h1 {
-  color: red;
+  color: #252733;
+  font-family: Muli;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+
+h2 {
+  color: #9FA2B4;
+  text-align: center;
+  font-family: Muli;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+h3 {
+  color: 252733;
+  font-family: Muli;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+h4 {
+  color: #9FA2B4;
+  text-align: center;
+  font-family: Muli;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+}
+
+h6 {
+  color: #9FA2B4;
+  font-family: Muli;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.1px;
 }
 
 hr {
@@ -65,6 +113,119 @@ hr {
 }
 .nav-link.active svg path {
   fill: #DDE2FF;
+}
+
+.content {
+  background: #F7F8FC;
+}
+.content .CTheader {
+  padding: 30px 30px 0 30px;
+}
+.content .CTheader .headerR {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.content .CTheader .headerR svg {
+  margin-left: 30px;
+}
+.content .CTheader .headerR p {
+  color: #252733;
+  text-align: right;
+  font-family: Muli;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin-left: 32px;
+}
+.content .CTheader .headerR img {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: 10px;
+}
+.content .detail {
+  padding: 30px 20px 0 20px;
+}
+.content .detail .row {
+  margin: 0;
+  padding: 0;
+}
+.content .detail .sheet {
+  border-radius: 8px;
+  border: 1px solid #DFE0EB;
+  background: #FFF;
+  margin: 15px;
+  text-align: center;
+  padding: 24px 32px 24px 32px;
+}
+.content .detail .sheet p {
+  color: #252733;
+  text-align: center;
+  font-family: Muli;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+.content .detail .sheet:not(.disable):hover {
+  border: 1px solid #3751FF;
+  cursor: pointer;
+}
+.content .detail .sheet:not(.disable):hover h2 {
+  color: #3751FF;
+}
+.content .detail .sheet:not(.disable):hover p {
+  color: #3751FF;
+}
+.content .detail .graph {
+  text-align: left;
+  padding: 32px;
+}
+.content .detail .graph .legenddiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.content .detail .graph .legenddiv svg {
+  margin: 0 12px 0 12px;
+}
+.content .detail .graph #graphimg {
+  margin-top: 73px;
+  max-width: 97%;
+  overflow: hidden;
+}
+.content .detail .graph #graphimg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.content .detail .graphside {
+  padding: 0;
+}
+.content .detail .graphside div {
+  margin: auto;
+  height: 20%;
+  border-left: 1px solid #DFE0EB;
+  border-top: 1px solid #DFE0EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content .detail .graphside div p {
+  font-size: 24px;
+  margin-top: 6px;
+}
+.content .detail .graphside div:first-child {
+  border-top: none;
 }
 
 /*# sourceMappingURL=style.css.map */
