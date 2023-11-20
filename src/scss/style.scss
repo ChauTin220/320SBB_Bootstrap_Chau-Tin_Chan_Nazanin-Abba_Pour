@@ -5,6 +5,7 @@ $C03: #DFE0EB;
 $C04: #A4A6B3;
 $C05: #3751FF;
 $C06: #4B506D;
+$activ: #DDE2FF;
 
 // Mixins
 @mixin txt($CL, $size, $FW, $LH, $space) {
@@ -32,29 +33,20 @@ $C06: #4B506D;
 
 // ------------------------------------------------------------------------------------
 h1 {
-    @include txt($C01, 24px, 700, normal, 0.3px);
+    @include txt($C04, 16px, 400, normal, 0.3px);
 }
 
 h2 {
-    @include txt($C02, 19px, 700, normal, 0.4px);
-    text-align: center;
+    @include txt($C01, 24px, 700, normal, 0.3px);
 }
 
 h3 {
-    @include txt($C01, 19px, 700, normal, 0.4px);
+    @include txt($C02, 19px, 700, normal, 0.4px);
     margin-bottom: 8px;
 }
 
 h4 {
-    @include txt($C02, 16px, 600, 22px, 0.3px);
-}
-
-h5 {
     @include txt($C01, 14px, 600, 20px, 0.2px);
-}
-
-h6 {
-    @include txt($C02, 12px, 600, normal, 0.1px);
 }
 
 hr {
@@ -79,7 +71,7 @@ hr {
         @include FCC(flex, center, flex-start);
     }
 
-    span {
+    h1 {
         @include txt($C04, 19px, 400, normal, 0.3px);
         margin-left: 10px;
     }
@@ -98,18 +90,18 @@ hr {
             margin-right: 24px;
         }
 
-        span {
-            @include txt($C04, 16px, 400, normal, 0.3px);
-        }
     }
 
     &.active {
-        color: #DDE2FF;
         background-color: rgba(red($C02), green($C02), blue($C02), 0.08);
-        border-left: 2px solid #DDE2FF;
+        border-left: 2px solid $activ;
+
+        h1{
+            color: $activ;
+        }
 
         svg path {
-            fill: #DDE2FF;
+            fill: $activ;
         }
     }
 }
@@ -121,7 +113,7 @@ hr {
     #CTheader {
         padding: 0px 30px;
         @include FCC(flex, center, flex-end);
-
+        
         #headerR {
             @include FCC(flex, center, flex-end);
 
@@ -140,7 +132,7 @@ hr {
                 height: 44px;
                 flex-shrink: 0;
                 border-radius: 50%;
-                border: 3px solid white;
+                border: 4px solid white;
                 margin-left: 0.8rem;
             }
         }
@@ -176,12 +168,30 @@ hr {
             }
         }
 
+        // 1st row
+        #row01{
+            h4{
+                @include txt($C02, 19px, 700, normal, 0.4px);
+                text-align: center;
+            }
+        }
 
         // 2nd row
         #row02 {
 
             #graph {
                 text-align: left;
+
+                div{
+                    h3{
+                        color: $C01;
+                    }
+
+                    P{
+                        @include txt($C02, 12px, 400, 16px, 0.1px);
+                        margin: 0;
+                    }
+                }
 
                 #legenddiv {
                     @include FCC(flex, center, flex-end);
@@ -215,6 +225,10 @@ hr {
                         @include FCC(flex, center, center);
                         flex-direction: column;
 
+                        h3{
+                            font-size: 16px;
+                        }
+
                         p {
                             font-size: 24px;
                             margin-top: 6px;
@@ -233,6 +247,13 @@ hr {
 
             .title {
                 padding: 0 32px;
+                h3{
+                    color: $C01;
+                }
+                P{
+                    @include txt($C02, 12px, 400, 16px, 0.1px);
+                    margin: 0;
+                }
             }
 
             .viewdetails {
@@ -256,7 +277,7 @@ hr {
                     padding: 20px 32px;
                     @include line(0, 0, 1px, 0);
 
-                    h5 {
+                    h4 {
                         align-items: flex-start;
                     }
 
@@ -317,7 +338,7 @@ hr {
                             opacity: 1;
                         }
 
-                        h5 {
+                        h4 {
                             margin-left: 16px;
                         }
                     }
@@ -351,7 +372,7 @@ hr {
                 }
 
                 .taskresult:nth-child(3) {
-                    h5 {
+                    h4 {
                         color: #C5C7CD;
                     }
                 }

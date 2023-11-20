@@ -1,4 +1,14 @@
 h1 {
+  color: #A4A6B3;
+  font-family: Muli;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+
+h2 {
   color: #252733;
   font-family: Muli;
   font-size: 24px;
@@ -8,19 +18,8 @@ h1 {
   letter-spacing: 0.3px;
 }
 
-h2 {
-  color: #9FA2B4;
-  font-family: Muli;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.4px;
-  text-align: center;
-}
-
 h3 {
-  color: #252733;
+  color: #9FA2B4;
   font-family: Muli;
   font-size: 19px;
   font-style: normal;
@@ -31,16 +30,6 @@ h3 {
 }
 
 h4 {
-  color: #9FA2B4;
-  font-family: Muli;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.3px;
-}
-
-h5 {
   color: #252733;
   font-family: Muli;
   font-size: 14px;
@@ -48,16 +37,6 @@ h5 {
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.2px;
-}
-
-h6 {
-  color: #9FA2B4;
-  font-family: Muli;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.1px;
 }
 
 hr {
@@ -83,7 +62,7 @@ hr {
   align-items: center;
   justify-content: flex-start;
 }
-#DBtitle span {
+#DBtitle h1 {
   color: #A4A6B3;
   font-family: Muli;
   font-size: 19px;
@@ -110,19 +89,12 @@ hr {
 .nav-link a svg {
   margin-right: 24px;
 }
-.nav-link a span {
-  color: #A4A6B3;
-  font-family: Muli;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.3px;
-}
 .nav-link.active {
-  color: #DDE2FF;
   background-color: rgba(159, 162, 180, 0.08);
   border-left: 2px solid #DDE2FF;
+}
+.nav-link.active h1 {
+  color: #DDE2FF;
 }
 .nav-link.active svg path {
   fill: #DDE2FF;
@@ -161,7 +133,7 @@ hr {
   height: 44px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 4px solid white;
   margin-left: 0.8rem;
 }
 #content #detail {
@@ -197,8 +169,31 @@ hr {
 #content #detail .sheet:not(.disable):hover p {
   color: #3751FF;
 }
+#content #detail #row01 h4 {
+  color: #9FA2B4;
+  font-family: Muli;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
 #content #detail #row02 #graph {
   text-align: left;
+}
+#content #detail #row02 #graph div h3 {
+  color: #252733;
+}
+#content #detail #row02 #graph div P {
+  color: #9FA2B4;
+  font-family: Muli;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  margin: 0;
 }
 #content #detail #row02 #graph #legenddiv {
   display: flex;
@@ -233,6 +228,9 @@ hr {
   justify-content: center;
   flex-direction: column;
 }
+#content #detail #row02 #graphside div article h3 {
+  font-size: 16px;
+}
 #content #detail #row02 #graphside div article p {
   font-size: 24px;
   margin-top: 6px;
@@ -242,6 +240,19 @@ hr {
 }
 #content #detail #row03 .title {
   padding: 0 32px;
+}
+#content #detail #row03 .title h3 {
+  color: #252733;
+}
+#content #detail #row03 .title P {
+  color: #9FA2B4;
+  font-family: Muli;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  margin: 0;
 }
 #content #detail #row03 .viewdetails {
   padding: 0 32px;
@@ -277,7 +288,7 @@ hr {
   border-bottom: 1px solid #DFE0EB;
   border-left: 0 solid #DFE0EB;
 }
-#content #detail #row03 #tickets .ticketsresult h5 {
+#content #detail #row03 #tickets .ticketsresult h4 {
   align-items: flex-start;
 }
 #content #detail #row03 #tickets .ticketsresult p {
@@ -341,7 +352,7 @@ hr {
 #content #detail #row03 #task .taskresult .checkbox-input input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
-#content #detail #row03 #task .taskresult .checkbox-input h5 {
+#content #detail #row03 #task .taskresult .checkbox-input h4 {
   margin-left: 16px;
 }
 #content #detail #row03 #task .taskresult button {
@@ -373,7 +384,7 @@ hr {
   background-color: #F0F1F7;
   color: #9FA2B4;
 }
-#content #detail #row03 #task .taskresult:nth-child(3) h5 {
+#content #detail #row03 #task .taskresult:nth-child(3) h4 {
   color: #C5C7CD;
 }
 
