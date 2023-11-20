@@ -138,7 +138,7 @@ hr {
     }
 
     #detail {
-        padding: 30px 20px 0 20px;
+        padding: 20px 20px 0 20px;
 
         .row {
             margin: 0;
@@ -208,7 +208,7 @@ hr {
                 }
 
                 #graphimg {
-                    margin-top: 73px;
+                    margin-top: 60px;
                     max-width: 97%;
                     overflow: hidden;
 
@@ -372,8 +372,13 @@ hr {
 @media (max-width: 991px) {
     #content {
         #detail {
-
             #row02 {
+                #graph {
+                    #graphimg {
+                        margin-top: 30px;
+                    }
+                }
+
                 #graphside {
                     div {
                         article {
