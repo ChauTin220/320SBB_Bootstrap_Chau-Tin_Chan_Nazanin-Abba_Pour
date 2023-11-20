@@ -5,7 +5,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Bootstrap Assignment</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
 	<link rel="stylesheet" href="/assets/css/style.css" />
 </head>
@@ -14,7 +15,7 @@
 	<!-- content start from here -->
 	<div class="row content-area flex-grow-1">
 		<!-- sidebar -->
-		<div class="col-lg-2 text-center bg01 p-0">
+		<aside class="col-lg-2 text-center bg01 p-0 d-none d-lg-block">
 			<div id="DBtitle">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 					<circle cx="16" cy="16" r="16" fill="#3751FF" />
@@ -50,7 +51,7 @@
 						<span>Overview</span>
 					</a>
 				</li>
-				<li class="nav-link">
+				<li class="nav-link position-relative">
 					<a href="">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 							<path opacity="0.4"
@@ -143,12 +144,15 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</aside>
 		<!-- Content -->
-		<div class="col-lg-10 content container-fluid">
-			<div class="CTheader row">
-				<h1 class="col-lg-4">Overview</h1>
-				<div class="col-lg-8 headerR">
+		<main class="col bg02" id="content">
+			<!-- Content header -->
+			<header class="row" id="CTheader">
+				<div class="col-4">
+					<h1>Overview</h1>
+				</div>
+				<div class="col-8" id="headerR">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 						<g clip-path="url(#clip0_584_242)">
 							<circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD" stroke-width="1.5" />
@@ -172,147 +176,182 @@
 					<p>Jones Ferdinand</p>
 					<img src="/assets/img/img_avatar.png" alt="Avatar">
 				</div>
-			</div>
-			<div class="detail row">
+			</header>
+			<div class="row" id="detail">
 				<!-- 1st row -->
-				<div class="sheet col">
-					<h2>Unresolved</h2>
-					<p>60</p>
-				</div>
-				<div class="sheet col">
-					<h2>Overdue</h2>
-					<p>16</p>
-				</div>
-				<div class="sheet col">
-					<h2>Open</h2>
-					<p>43</p>
-				</div>
-				<div class="sheet col">
-					<h2>On hold</h2>
-					<p>64</p>
-				</div>
+				<section class="row" id="row01">
+					<article class="col-6 col-lg-3 p-3">
+						<div class="p-4 sheet rounded bg-white text-center">
+							<h2>Unresolved</h2>
+							<p>60</p>
+						</div>
+					</article>
+					<article class="col-6 col-lg-3 p-3">
+						<div class="p-4 sheet rounded bg-white text-center">
+							<h2>Overdue</h2>
+							<p>16</p>
+						</div>
+					</article>
+					<article class="col-6 col-lg-3 p-3">
+						<div class="p-4 sheet rounded bg-white text-center">
+							<h2>Open</h2>
+							<p>43</p>
+						</div>
+					</article>
+					<article class="col-6 col-lg-3 p-3">
+						<div class="p-4 sheet rounded bg-white text-center">
+							<h2>On hold</h2>
+							<p>64</p>
+						</div>
+					</article>
+				</section>
 				<!-- 2nd row -->
-				<div class=" container-fluid p-0">
-					<div class="row sheet disable p-0">
-						<div class="col-lg-8 graph row">
-							<h3>Today's trends</h3>
-							<div class="col-lg-7">
-								<h6>as of 25 May 2019, 09:41 PM</h6>
-							</div>
-							<div class="col-lg-5 legenddiv">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
-									fill="none">
-									<path d="M1 1H17" stroke="#3751FF" stroke-width="2" stroke-linecap="round" />
-								</svg>
-								<h6>Today</h6>
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2"
-									fill="none">
-									<path d="M1 1H17" stroke="#DFE0EB" stroke-width="2" stroke-linecap="round" />
-								</svg>
-								<h6>Yesterday</h6>
-							</div>
-							<div class="col-lg-12" id="graphimg">
-								<img src="/assets/img/fullgraph.png" alt="Today's trends graph">
+				<section class="row" id="row02">
+					<div class="col-12 p-3">
+						<div class="sheet disable p-0 rounded bg-white">
+							<div class="row">
+								<div class="col-lg-8 p-4" id="graph">
+									<div class="row">
+										<h3>Today's trends</h3>
+										<div class="col-6">
+											<h6>as of 25 May 2019, 09:41 PM</h6>
+										</div>
+										<div class="col-6" id="legenddiv">
+											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2"
+												viewBox="0 0 18 2" fill="none">
+												<path d="M1 1H17" stroke="#3751FF" stroke-width="2"
+													stroke-linecap="round" />
+											</svg>
+											<h6>Today</h6>
+											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="2"
+												viewBox="0 0 18 2" fill="none">
+												<path d="M1 1H17" stroke="#DFE0EB" stroke-width="2"
+													stroke-linecap="round" />
+											</svg>
+											<h6>Yesterday</h6>
+										</div>
+									</div>
+									<div class="row" id="graphimg">
+										<img src="/assets/img/fullgraph.png" alt="Today's trends graph">
+									</div>
+								</div>
+								<!-- Graph side bar -->
+								<div class="col-lg-4 p-0" id="graphside">
+									<div class="row">
+										<article id="box" class="col-lg-12 m-auto">
+											<h4>Resolved</h4>
+											<p>449</p>
+										</article>
+										<article class="col-lg-12 m-auto">
+											<h4>Resolved</h4>
+											<p>426</p>
+										</article>
+										<article class="col-lg-12 m-auto">
+											<h4>Average first response time</h4>
+											<p>33m</p>
+										</article>
+										<article class="col-lg-12 m-auto">
+											<h4>Average response time</h4>
+											<p>3h 8m</p>
+										</article>
+										<article class="col-lg-12 m-auto">
+											<h4>Resolution within SLA</h4>
+											<p>94%</p>
+										</article>
+									</div>
+								</div>
 							</div>
 						</div>
-						<!-- Graph side bar -->
-						<div class="col-lg-4 row graphside">
-							<div class="col-lg-12">
-								<h4>Resolved</h4>
-								<p>449</p>
-							</div>
-							<div class="col-lg-12">
-								<h4>Resolved</h4>
-								<p>426</p>
-							</div>
-							<div class="col-lg-12">
-								<h4>Average first response time</h4>
-								<p>33m</p>
-							</div>
-							<div class="col-lg-12">
-								<h4>Average response time</h4>
-								<p>3h 8m</p>
-							</div>
-							<div class="col-lg-12">
-								<h4>Resolution within SLA</h4>
-								<p>94%</p>
+					</div>
+				</section>
+				<!-- 3nd row -->
+				<section class="row" id="row03">
+					<!-- 3rd row - Left box-->
+					<article class="col-12 col-lg-6 p-3" id="tickets">
+						<div class="disable rounded bg-white pt-5 p-2 sheet">
+							<div class="row">
+								<div class="col-7 title">
+									<h3>Unresolved tickets</h3>
+									<h6>Group: <b>Support</b></h6>
+								</div>
+								<a href="" class="col-5 viewdetails">
+									<p>View details</p>
+								</a>
+								<div class="col-lg-12 ticketsresult">
+									<h5>Waiting on Feature Request</h5>
+									<p>4238</p>
+								</div>
+								<div class="col-lg-12 ticketsresult">
+									<h5>Awaiting Customer Response</h5>
+									<p>1005</p>
+								</div>
+								<div class="col-lg-12 ticketsresult">
+									<h5>Awaiting Developer Fix</h5>
+									<p>914</p>
+								</div>
+								<div class="col-lg-12 ticketsresult border-bottom-0">
+									<h5>Pending</h5>
+									<p>281</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<!-- 3rd row - Left box-->
-				<div class="sheet col disable tickets row">
-					<div class="col-lg-7 title">
-						<h3>Unresolved tickets</h3>
-						<h6>Group: <b>Support</b></h6>
-					</div>
-					<a href="" class="col-lg-5 viewdetails">
-						<p>View details</p>
-					</a>
-					<div class="col-lg-12 ticketsresult">
-						<h5>Waiting on Feature Request</h5>
-						<p>4238</p>
-					</div>
-					<div class="col-lg-12 ticketsresult">
-						<h5>Awaiting Customer Response</h5>
-						<p>1005</p>
-					</div>
-					<div class="col-lg-12 ticketsresult">
-						<h5>Awaiting Developer Fix</h5>
-						<p>914</p>
-					</div>
-					<div class="col-lg-12 ticketsresult">
-						<h5>Pending</h5>
-						<p>281</p>
-					</div>
-				</div>
-				<!-- 3rd row - Right box-->
-				<div class="sheet col disable task row">
-					<div class="col-lg-7 title">
-						<h3>Tasks</h3>
-						<h6>Today</h6>
-					</div>
-					<a href="" class="col-lg-5 viewdetails">
-						<p>View details</p>
-					</a>
-					<div class="col-lg-12 taskresult">
-						<h5>Create new task</h5>
-						<a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-								fill="none">
-								<rect width="24" height="24" rx="8" fill="#F0F1F7" />
-								<path d="M12 7V17" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
-								<path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
-							</svg></a>
-					</div>
-					<div class="col-lg-12 taskresult">
-						<div class="checkbox-input">
-							<input type="checkbox" value="" id="checkbox01">
-							<label for="checkbox01"></label>
-							<h5>Finish ticket update</h5>
+					</article>
+					<!-- 3rd row - Right box-->
+					<article class="col-12 col-lg-6 p-3" id="task">
+						<div class="disable rounded bg-white pt-5 p-2 sheet">
+							<div class="row">
+								<div class="col-7 title">
+									<h3>Tasks</h3>
+									<h6>Today</h6>
+								</div>
+								<a href="" class="col-5 viewdetails">
+									<p>View details</p>
+								</a>
+								<div class="col-lg-12 taskresult">
+									<h5>Create new task</h5>
+									<a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none">
+											<rect width="24" height="24" rx="8" fill="#F0F1F7" />
+											<path d="M12 7V17" stroke="#9FA2B4" stroke-width="2"
+												stroke-linecap="round" />
+											<path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2"
+												stroke-linecap="round" />
+										</svg></a>
+								</div>
+								<div class="col-lg-12 taskresult">
+									<div class="checkbox-input position-relative">
+										<input type="checkbox" value="" id="checkbox01">
+										<label for="checkbox01"></label>
+										<h5>Finish ticket update</h5>
+									</div>
+									<button type="button" id="urgentbtn">URGENT</button>
+								</div>
+								<div class="col-lg-12 taskresult">
+									<div class="checkbox-input position-relative">
+										<input type="checkbox" value="" id="checkbox02">
+										<label for="checkbox02"></label>
+										<h5>Create new ticket example</h5>
+									</div>
+									<button type="button" id="newbtn">NEW</button>
+								</div>
+								<div class="col-lg-12 taskresult border-bottom-0">
+									<div class="checkbox-input position-relative">
+										<input type="checkbox" value="" id="checkboxchecked" checked>
+										<label for="checkboxchecked"></label>
+										<h5>Update ticket report</h5>
+									</div>
+									<button type="button" id="defaultbtn">DEFAULT</button>
+								</div>
+							</div>
 						</div>
-						<button type="button" id="urgentbtn">URGENT</button>
-					</div>
-					<div class="col-lg-12 taskresult">
-						<div class="checkbox-input">
-							<input type="checkbox" value="" id="checkbox02">
-							<label for="checkbox02"></label>
-							<h5>Create new ticket example</h5>
-						</div>
-						<button type="button" id="newbtn">NEW</button>
-					</div>
-					<div class="col-lg-12 taskresult">
-						<div class="checkbox-input">
-							<input type="checkbox" value="" id="checkboxchecked" checked>
-							<label for="checkboxchecked"></label>
-							<h5>Update ticket report</h5>
-						</div>
-						<button type="button" id="defaultbtn">DEFAULT</button>
-					</div>
-				</div>
+					</article>
+				</section>
 			</div>
-		</div>
+		</main>
 	</div>
-	<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
