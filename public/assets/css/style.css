@@ -26,7 +26,7 @@ h3 {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.4px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 h4 {
@@ -169,7 +169,7 @@ hr {
 #content #detail .sheet:not(.disable):hover p {
   color: #3751FF;
 }
-#content #detail #row01 h4 {
+#content #detail #row01 article div h3 {
   color: #9FA2B4;
   font-family: Muli;
   font-size: 19px;
@@ -178,6 +178,9 @@ hr {
   line-height: normal;
   letter-spacing: 0.4px;
   text-align: center;
+}
+#content #detail #row01 article div p {
+  margin: 0;
 }
 #content #detail #row02 #graph {
   text-align: left;
@@ -233,7 +236,7 @@ hr {
 }
 #content #detail #row02 #graphside div article p {
   font-size: 24px;
-  margin-top: 6px;
+  margin: 0;
 }
 #content #detail #row02 #graphside div article:first-child {
   border-top: none;
@@ -383,7 +386,7 @@ hr {
     border-right: 0 solid #DFE0EB;
     border-bottom: 0 solid #DFE0EB;
     border-left: 0 solid #DFE0EB;
-    padding: 15px 0;
+    padding: 20px 0;
   }
   #content #detail #row02 #graphside div article:first-child {
     border-top: 1px solid #DFE0EB;

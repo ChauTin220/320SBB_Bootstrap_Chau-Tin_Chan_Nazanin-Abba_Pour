@@ -41,7 +41,7 @@ h2 {
 
 h3 {
     @include txt($C02, 19px, 700, normal, 0.4px);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 h4 {
@@ -169,9 +169,16 @@ hr {
 
         // 1st row
         #row01{
-            h4{
-                @include txt($C02, 19px, 700, normal, 0.4px);
-                text-align: center;
+            article{
+                div{
+                    h3{
+                        @include txt($C02, 19px, 700, normal, 0.4px);
+                        text-align: center;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
             }
         }
 
@@ -230,7 +237,7 @@ hr {
 
                         p {
                             font-size: 24px;
-                            margin-top: 6px;
+                            margin: 0;
                         }
                     }
 
@@ -371,7 +378,7 @@ hr {
                     div {
                         article {
                             @include line(1px, 0, 0, 0);
-                            padding: 15px 0;
+                            padding: 20px 0;
                         }
 
                         article:first-child {
