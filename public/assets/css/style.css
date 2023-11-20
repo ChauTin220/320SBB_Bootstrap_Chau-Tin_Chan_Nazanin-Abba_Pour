@@ -269,7 +269,7 @@ hr {
   text-align: right;
   margin-top: 5px;
 }
-#content #detail #row03 #tickets b {
+#content #detail #row03 #tickets strong {
   color: #4B506D;
   font-family: Muli;
   font-size: 12px;
@@ -292,7 +292,7 @@ hr {
   align-items: flex-start;
 }
 #content #detail #row03 #tickets .ticketsresult p {
-  color: #D5D9ED;
+  color: #9FA2B4;
   font-family: Muli;
   font-size: 14px;
   font-style: normal;
@@ -313,47 +313,36 @@ hr {
   border-bottom: 1px solid #DFE0EB;
   border-left: 0 solid #DFE0EB;
 }
-#content #detail #row03 #task .taskresult .checkbox-input {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+#content #detail #row03 #task .taskresult label {
+  color: #252733;
+  font-family: Muli;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  position: relative;
+  top: 2px;
+  left: 4px;
 }
-#content #detail #row03 #task .taskresult .checkbox-input label {
-  background-color: #FFF;
-  border: 1px solid #CCC;
+#content #detail #row03 #task .taskresult input {
+  width: 1.4em;
+  height: 1.4em;
+  background-color: white;
   border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #C5C7CD;
+  appearance: none;
+  outline: none;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  top: 0;
 }
-#content #detail #row03 #task .taskresult .checkbox-input label:after {
-  border: 2px solid #FFF;
-  border-top: none;
-  border-right: none;
-  content: "";
-  height: 6px;
-  opacity: 0;
-  position: absolute;
-  top: 5px;
-  left: 3px;
-  transform: rotate(-45deg);
-  width: 12px;
-}
-#content #detail #row03 #task .taskresult .checkbox-input input[type=checkbox] {
-  visibility: hidden;
-}
-#content #detail #row03 #task .taskresult .checkbox-input input[type=checkbox]:checked + label {
+#content #detail #row03 #task .taskresult input:checked {
   background-color: #3751FF;
-  border-color: #3751FF;
-}
-#content #detail #row03 #task .taskresult .checkbox-input input[type=checkbox]:checked + label:after {
-  opacity: 1;
-}
-#content #detail #row03 #task .taskresult .checkbox-input h4 {
-  margin-left: 16px;
+  background-image: url("/assets/img/checked.svg");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #3751FF;
 }
 #content #detail #row03 #task .taskresult button {
   color: #FFF;
